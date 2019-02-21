@@ -47,7 +47,7 @@ This project was sponsored by Jean Kirschner and Jason Snouffer at ASRC Federal.
 
 [Natural Language Processing tutorial with TensoFlow](https://github.com/Hvass-Labs/TensorFlow-Tutorials/blob/master/20_Natural_Language_Processing.ipynb)
 
-[Lab41/hermes supplied some code for downloading data (most of which we heavily modified)](https://github.com/Lab41/hermes/tree/master/src/utils/code_etl)
+[Lab41/hermes supplied some code for downloading source code (most of which we heavily modified)](https://github.com/Lab41/hermes/tree/master/src/utils/code_etl)
 
 
 
