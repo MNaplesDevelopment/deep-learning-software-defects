@@ -1,5 +1,7 @@
 # Deep Learning to Detect Software Defects
 
+![kmeans](/src/imgs/kmeans.png)
+
 ## Abstract
 Modern bug detection algorithms rely on hand written rules to ensure source code follows a certain format. As software engineering progresses and source code becomes more complicated the number of different bugs and their complexity increases.  Building algorithms by hand to detect more subtle bugs is almost impossible. To build a more robust bug detector this project takes a natural language processing approach to solving this problem. This project uses information normal bug detectors usually dont consider, like variable names. Even though developers are free to create their own variable names it is good programming practice to use names that are meaningful. The idea is with enough data we can create embeddings for variable names that will do a decent job at describing how those variables are usually used. Using deep learning we create word embeddings on source code and use a recurrent neural network to distinguish between buggy and non-buggy code. To frame bug detection as a machine learning task large amounts of source code, both buggy and non-buggy are required. Our program can download a list of GitHub repositories, extract the source code and we use simple code transformations that take clean code and alter it in some way to make it buggy. This allows us to collect an arbitrarily large amount of labeled buggy and non-buggy code. This program is far from being a commercial product but as a proof of concept we achieved an accuracy of 85% predicting swapped parameters in previously unseen code.
 
@@ -27,5 +29,30 @@ I believe this project takes a very interesting approach to bug detection. I was
 ## Ideas for Improvements
 This project was completed in 1 semester in a Software Engineering class, so this project is not perfect and theres a lot that could be improved.
 
-* My first recommendation would be to use an imprementation of Word2Vec in PyTorch or TensorFlow because in this project we are currently using, 
+* Create a webcrawler to automatically download a massive dataset of source code.
+
+* Use an imprementation of Word2Vec in PyTorch or TensorFlow because in this project we are currently using SciKit-Learn which does not utilize GPUs and will not be practical with larger datasets.
+
+* Use a database instead of storing data to files like we are now as it will quickly get out of hand.
+
+* Modify src/bug_generator.py to create more types of bugs.
+
+* General code clean up and add more aurguments 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
