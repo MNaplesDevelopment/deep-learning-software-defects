@@ -27,5 +27,5 @@ I believe this project takes a very interesting approach to bug detection. I was
 ## Ideas for Improvements
 This project was completed in 1 semester in a Software Engineering class, so this project is not perfect and theres a lot that could be improved.
 
-*My first recommendation would be to use an imprementation of Word2Vec in PyTorch or TensorFlow because in this project we are currently using, 
+* My first recommendation would be to use an imprementation of Word2Vec in PyTorch or TensorFlow because in this project we are currently using, 
 
