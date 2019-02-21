@@ -21,7 +21,7 @@ Run src/vector_explorer.py - this script loads the embeddings and feeds them to 
 
 ### Step 4
 
-Run src/bug_generator.py - this file will look through the corpus of source code and look for specific logic patterns and alter them in a structured way, to goal is to take clean code and transform it into buggy code. This will give us an arbitrarily large amount of buggy and clean code
+Run src/bug_generator.py - this file will look through the corpus of source code and look for specific logic patterns and alter them in a structured way, to goal is to take clean code and transform it into buggy code. This will give us an arbitrarily large amount of buggy and clean code. This creates 2 pickle files, and stores them in src/py2vec/ - These files will contain 
 
 
 
