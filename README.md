@@ -27,7 +27,7 @@ Run src/RNN_model/.ipynb - This notebook loads the embeddings and buggy and non-
 I believe this project takes a very interesting approach to bug detection. I was not able to find many research projects taking this kind of approach. I took a lot of my ideas for this project from modern Natural Language Processing. While this project was pretty small scale I think the result we got were very promising and prove that this concept will work and I am confident it could scale up very well. We tested this project on only about 2 million lines of code, which in Deep Learning isn't really that much data, to get better embeddings its not uncommon to see corpuses upwards of 1 billion lines when creating word embeddings, this would be the number I would strive for in this project. 
 
 ## Ideas for Improvements
-This project was completed in 1 semester in a Software Engineering class, so this project is not perfect and theres a lot that could be improved.
+This project was completed in 1 semester in a Software Engineering class, so this project is not perfect and theres a lot that could be improved. Which I would like to impove given enough free time.
 
 * Create a webcrawler to automatically download a massive dataset of source code.
 
