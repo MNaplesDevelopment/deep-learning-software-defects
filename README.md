@@ -15,7 +15,7 @@ Edit src/download_data.sh and enter a list of GitHub repositories. Then run this
 Run src/json_to_vector.py - this script will load the json created in the previous step, tokenize the syntax, and feed the source code to SciKit's Word2Vec. A pickle file will be created and stored in src/py2vec/, this file will contain a dictionary with all the word embeddings I intened to recreate this file using PyTorch to take advantage of a GPU.
 
 ### Step 3 (optional)
-Run src/vector_explorer.py - this script loads the embeddings and feeds them to a custom kmeans clustering algorithm we wrote and will display the clustered embedding in MatPlotLib.
+Run src/vector_explorer.py - this script loads the embeddings and feeds them to a custom kmeans clustering algorithm we wrote and will display the clustered embedding in MatPlotLib. (picture above)
 
 ### Step 4
 Run src/bug_generator.py - this file will look through the corpus of source code and look for specific logic patterns and alter them in a structured way, to goal is to take clean code and transform it into buggy code. This will give us an arbitrarily large amount of buggy and clean code. This creates 2 pickle files, and stores them in src/py2vec/ - These 2 files will contain arrays containing buggy and non-buggy code examples.
