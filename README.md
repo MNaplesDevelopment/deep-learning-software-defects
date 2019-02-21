@@ -20,7 +20,7 @@ Run src/vector_explorer.py - this script loads the embeddings and feeds them to 
 ### Step 4
 Run src/bug_generator.py - this file will look through the corpus of source code and look for specific logic patterns and alter them in a structured way, to goal is to take clean code and transform it into buggy code. This will give us an arbitrarily large amount of buggy and clean code. This creates 2 pickle files, and stores them in src/py2vec/ - These 2 files will contain arrays containing buggy and non-buggy code examples.
 
-#### Step 5
+### Step 5
 Run src/RNN_model/.ipynb - This notebook loads the embeddings and buggy and non-buggy examples, creates an embedding matrix, builds an LSTM-RNN using Keras with a TensorFlow backend and trains it on the code examples.
 
 ## Results and Final Thoughts
@@ -43,9 +43,9 @@ This project was completed in 1 semester in a Software Engineering class, so thi
 This project was sponsored by Jean Kirschner and Jason Snouffer at ASRC Federal.
 
 ## Acknowledgments
-http://mp.binaervarianz.de/DeepBugs_TR_Nov2017.pdf
+[Deep Learning to Find Bugs](http://mp.binaervarianz.de/DeepBugs_TR_Nov2017.pdf)
 
-https://github.com/Hvass-Labs/TensorFlow-Tutorials/blob/master/20_Natural_Language_Processing.ipynb
+[Natural Language Processing tutorial with TensoFlow](https://github.com/Hvass-Labs/TensorFlow-Tutorials/blob/master/20_Natural_Language_Processing.ipynb)
 
 
 
