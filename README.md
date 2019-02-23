@@ -51,8 +51,8 @@ This project was sponsored by Jean Kirschner and Jason Snouffer at ASRC Federal.
 
 
 ## Dependencies
-tqdm
-numpy
+1. tqdm
+2. numpy
 matplotlib
 TensorFlow
 PyTorch
