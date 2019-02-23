@@ -53,10 +53,10 @@ This project was sponsored by Jean Kirschner and Jason Snouffer at ASRC Federal.
 ## Dependencies
 1. tqdm
 2. numpy
-matplotlib
-TensorFlow
-PyTorch
-Keras
+3. matplotlib
+4. TensorFlow
+5. PyTorch
+6. Keras
 
 ## Licence (MIT)
 This project and source-code are published under the MIT License which allows very broad use for both academic and commercial purposes.
