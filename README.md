@@ -38,7 +38,7 @@ This project was completed in 1 semester in a Software Engineering class, so thi
 * General code clean up and add more aurguments when running scripts as some options that should be customizable are still hard-coded.
 
 ## Sponsors
-This project was sponsored by Jean Kirschner and Jason Snouffer at ASRC Federal.
+This project was sponsored by ASRC Federal.
 
 ## Acknowledgments
 [Deep Learning to Find Bugs](http://mp.binaervarianz.de/DeepBugs_TR_Nov2017.pdf)
