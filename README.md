@@ -9,16 +9,16 @@ Modern bug detection algorithms rely on hand written rules to ensure source code
 NOTE: This project is designed to work best on Linux.
 
 ### Step 1
-Edit src/download_data.sh and enter a list of GitHub repositories. Then run this script and a json file will be created and stored in the src/jsons/ folder. Note that all repos you enter should be java projects as this program will only extract code from .java files. You can experiment with other languages if you modify the line 98 in src/repo_to_json, but keep in mind the project is optimized to work with java syntax, however it should work with languages with similar syntax such as c#, c++, javascript, etc.
+Edit src/download_data.sh and enter a list of GitHub repositories. Then run this script and a text file will be created and stored in the src/data/ folder. Note that all repos you enter should be java projects as this program will only extract code from .java files. You can experiment with other languages if you modify the line 98 in src/repo_to_json, but keep in mind the project is optimized to work with java syntax, however it should work with languages with similar syntax such as c#, c++, javascript, etc.
 
 ### Step 2
-Run src/json_to_vector.py - this script will load the json created in the previous step, tokenize the syntax, and feed the source code to SciKit's Word2Vec. A pickle file will be created and stored in src/py2vec/, this file will contain a dictionary with all the word embeddings I intened to recreate this file using PyTorch to take advantage of a GPU.
+Run src/json_to_vector.py - this script will load the text file created in the previous step remove comments, tokenize the syntax, and feed the source code to Word2Vec. A pickle file will be created and stored in src/data/, this file will contain a dictionary with all the word embeddings.
 
 ### Step 3 (optional)
 Run src/vector_explorer.py - this script loads the embeddings and feeds them to a custom kmeans clustering algorithm we wrote and will display the clustered embedding in MatPlotLib. (picture above)
 
 ### Step 4
-Run src/bug_generator.py - this file will look through the corpus of source code and look for specific logic patterns and alter them in a structured way, to goal is to take clean code and transform it into buggy code. This will give us an arbitrarily large amount of buggy and clean code. This creates 2 pickle files, and stores them in src/py2vec/ - These 2 files will contain arrays containing buggy and non-buggy code examples.
+Run src/bug_generator.py - this file will look through the corpus of source code and look for specific logic patterns and alter them in a structured way, to goal is to take clean code and transform it into buggy code. This will give us an arbitrarily large amount of buggy and clean code. This creates 2 pickle files, and stores them in src/data/ - These 2 files will contain arrays containing buggy and non-buggy code examples.
 
 ### Step 5
 Run src/RNN_model/.ipynb - This notebook loads the embeddings and buggy and non-buggy examples, creates an embedding matrix, builds an LSTM-RNN using Keras with a TensorFlow backend and trains it on the code examples. Take a look at this file because I goes into much more detail into the reasoning behind the decisions we made.
@@ -30,8 +30,6 @@ I believe this project takes a very interesting approach to bug detection. I was
 This project was completed in 1 semester in a Software Engineering class, so this project is not perfect and theres a lot that could be improved. Which I would like to impove given enough free time.
 
 * Create a webcrawler to automatically download a massive dataset of source code.
-
-* Use an imprementation of Word2Vec in PyTorch or TensorFlow because in this project we are currently using SciKit-Learn which does not utilize GPUs and will not be practical with larger datasets.
 
 * Use a database instead of storing data to files like we are now as it will quickly get out of hand.
 
@@ -47,7 +45,18 @@ This project was sponsored by Jean Kirschner and Jason Snouffer at ASRC Federal.
 
 [Natural Language Processing tutorial with TensoFlow](https://github.com/Hvass-Labs/TensorFlow-Tutorials/blob/master/20_Natural_Language_Processing.ipynb)
 
+[Word2Vec Implementation in PyTorch](https://github.com/Andras7/word2vec-pytorch)
+
 [Lab41/hermes supplied some code for downloading source code (most of which we heavily modified)](https://github.com/Lab41/hermes/tree/master/src/utils/code_etl)
+
+
+## Dependencies
+tqdm
+numpy
+matplotlib
+TensorFlow
+PyTorch
+Keras
 
 ## Licence (MIT)
 This project and source-code are published under the MIT License which allows very broad use for both academic and commercial purposes.
